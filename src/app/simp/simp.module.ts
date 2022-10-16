@@ -15,4 +15,12 @@ import {SimpComponent} from "../simp/simp.component";
 })
 
 
-export class SimpModule { }
+export class SimpModule {
+  static forRoot() {
+    return {
+      ngModule: SimpModule,
+      providers: [MathService]
+    }
+  }
+
+ }
